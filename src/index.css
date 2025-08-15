@@ -8,35 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Dating App Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 340 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 340 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 340 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Passionate Pink/Red gradient */
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 350 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Soft romantic tones */
+    --secondary: 340 15% 96%;
+    --secondary-foreground: 340 10% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 340 10% 95%;
+    --muted-foreground: 340 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Warm coral */
+    --accent: 14 90% 65%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 340 15% 92%;
+    --input: 340 15% 95%;
+    --ring: 340 82% 52%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Dating App Specific Colors */
+    --love-gradient-start: 340 82% 52%;
+    --love-gradient-end: 14 90% 65%;
+    --match-success: 142 76% 36%;
+    --super-like: 217 91% 60%;
+    --nope-red: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-love: linear-gradient(135deg, hsl(var(--love-gradient-start)), hsl(var(--love-gradient-end)));
+    --gradient-match: linear-gradient(135deg, hsl(var(--match-success)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9), hsl(340 15% 98% / 0.9));
+
+    /* Shadows */
+    --shadow-romantic: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(340 15% 25% / 0.15);
+    --shadow-button: 0 4px 16px -4px hsl(var(--primary) / 0.4);
+
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +83,46 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode for dating app */
+    --background: 340 15% 8%;
+    --foreground: 340 5% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 340 15% 10%;
+    --card-foreground: 340 5% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 340 15% 10%;
+    --popover-foreground: 340 5% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 340 82% 60%;
+    --primary-foreground: 340 15% 8%;
+    --primary-glow: 350 90% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 340 15% 15%;
+    --secondary-foreground: 340 5% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 340 15% 15%;
+    --muted-foreground: 340 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 14 90% 70%;
+    --accent-foreground: 340 15% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 340 15% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 340 15% 20%;
+    --input: 340 15% 15%;
+    --ring: 340 82% 60%;
+
+    /* Dark mode gradients */
+    --gradient-love: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-match: linear-gradient(135deg, hsl(var(--match-success)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(340 15% 12% / 0.9), hsl(340 15% 15% / 0.9));
+
+    /* Dark shadows */
+    --shadow-romantic: 0 10px 30px -10px hsl(var(--primary) / 0.5);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.3);
+    --shadow-button: 0 4px 16px -4px hsl(var(--primary) / 0.6);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +140,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+
+  /* Dating app specific styles */
+  .love-gradient {
+    background: var(--gradient-love);
+  }
+
+  .match-gradient {
+    background: var(--gradient-match);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .romantic-shadow {
+    box-shadow: var(--shadow-romantic);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .button-shadow {
+    box-shadow: var(--shadow-button);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+}
+
+/* Custom animations for dating app */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes swipe-left {
+  0% { transform: translateX(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(-100vw) rotate(-30deg); opacity: 0; }
+}
+
+@keyframes swipe-right {
+  0% { transform: translateX(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(100vw) rotate(30deg); opacity: 0; }
+}
+
+@keyframes match-celebration {
+  0% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.animate-swipe-left {
+  animation: swipe-left 0.5s ease-out forwards;
+}
+
+.animate-swipe-right {
+  animation: swipe-right 0.5s ease-out forwards;
+}
+
+.animate-match {
+  animation: match-celebration 0.8s ease-out forwards;
 }
